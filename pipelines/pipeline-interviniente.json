@@ -1,0 +1,37 @@
+{
+    "name": "arana-san-interviniente",
+    "storage": "/Users/rafael.arana@databricks.com/DLT/dlt-san/interviniente",
+    "configuration": {
+        "pipelines.useV2DetailsPage": "true",
+        "fire_entity": "interviniente",
+        "landing_zone": "/Users/rafael.arana@databricks.com/DLT/dlt_san/landing/interviniente",
+        "invalid_format_path": "/Users/rafael.arana@databricks.com/DLT/dlt_san/invalid/interviniente",
+        "file_format": "csv",
+        "delimiter": "|",
+        "max_files": "1"
+    },
+    "clusters": [
+        {
+            "label": "default",
+            "autoscale": {
+                "min_workers": 1,
+                "max_workers": 5
+            }
+        }
+    ],
+    "libraries": [
+        {
+            "notebook": {
+                "path": "/Repos/rafael.arana@databricks.com/dlt-san/01.DLT-SAN-Autoloader-template"
+            }
+        },
+        {
+            "notebook": {
+                "path": "/Repos/rafael.arana@databricks.com/dlt-san/02.DLT-SAN-02.DLT-SAN-Interviniente-Controls"
+            }
+        }
+    ],
+    "target": "aranasan",
+    "continuous": false,
+    "development": true
+}
